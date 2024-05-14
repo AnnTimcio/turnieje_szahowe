@@ -1,3 +1,8 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+</html>
 
 <form method="POST" action="Rej.php">
 Podaj swoje imie i nazwisko: <input type="text" name="naz"><br>

@@ -1,0 +1,40 @@
+*{
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    background-color: rgb(205, 202, 197);
+}
+
+table{
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+tr{
+    height: 50px;
+    background-color: rgb(205, 202, 197);
+    border-color:  rgb(205, 202, 197);
+}
+td{
+    width:300px;
+    background-color: rgb(205, 202, 197);
+    border-color:  rgb(205, 202, 197);
+}
+
+a{
+  text-decoration: none; 
+  color:rgb(101, 96, 96); 
+  background-color: rgb(205, 202, 197) ;
+}
+
+a:visited{
+    color:rgb(138, 132, 132);
+}

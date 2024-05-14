@@ -1,3 +1,8 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+</html>
 
 <form method="POST" action="dodajtu.php">
 Podaj nazwe organizatora: <input type="text" name="org"><br>
