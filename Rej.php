@@ -22,7 +22,10 @@ if(isset($_GET['t'])) {
 <p class="tur"><input type="submit" name="submit"></input></p> 
 </form>
 </div>
+
+<br><div><a href='organizator.php'>wórć do listy turniejów</a></div>
 <?php
+
 
 
 if(isset($_POST['submit'])){

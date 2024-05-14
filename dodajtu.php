@@ -12,7 +12,7 @@
 <p class="tur">Napisz opis dla turnieju: <input type="text" name="opis"></p> 
 <p class="tur"> <input type="submit" name="submit"></input></p> 
 </form>
-</div>
+</div><br><div><a href='organizator.php'>wróć do listy turniejów</a></div>
 <?php
 if(isset($_POST['submit'])){
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');

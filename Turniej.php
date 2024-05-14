@@ -33,5 +33,8 @@ while ($row2 = $res2 -> fetch_row()) {
 }
 echo "</table>";
 
+echo "<br><div><a href='organizator.php'>wróć do listy turniejów</a></div>";
+
+
 mysqli_close($a);
 ?>
