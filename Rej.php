@@ -1,3 +1,13 @@
+<?php
+if(isset($_GET['t'])) {
+    $id_t = $_GET['t'];
+} elseif (isset($_POST['t'])){
+    $id_t= $_POST['t'];
+} else {
+    die("coś poszło nie tak");
+  }
+
+?>
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
@@ -8,17 +18,19 @@
 <form method="POST" action="Rej.php">
 <p class="tur">Podaj swoje imie i nazwisko: <input type="text" name="naz"></p> 
 <p class="tur">Podaj swoją date urodzenia: <input type="date" name="dat"></p>
-<p class="tur">Podaj numer turnieju: <input type="number" name="tur"></p>
+<input type="hidden" name="t" value='<?php echo $id_t ?>'>
 <p class="tur"><input type="submit" name="submit"></input></p> 
 </form>
 </div>
 <?php
+
+
 if(isset($_POST['submit'])){
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');
 $imienaz = $_POST['naz'];
 $dataa = $_POST['dat'];
-$turnij = $_POST['tur'];
-$b = "INSERT INTO uczestnik (nazwisko, data_u, id_t) VALUES ('$imienaz', '$dataa','$turnij')";
+
+$b = "INSERT INTO uczestnik (nazwisko, data_u, id_t) VALUES ('$imienaz', '$dataa','$id_t')";
 if ($a->query($b) === TRUE) {
     echo "
         <script type= 'text/javascript'>

@@ -24,7 +24,7 @@ while ($row = $res -> fetch_row()) {
   }
 
 
-echo "<p>zarejestruj się i weź udział: <BUTTON><a href='Rej.php'>klikni</a></button></p><br><br>";
+echo "<p>zarejestruj się i weź udział: <BUTTON><a href='Rej.php?t=".$id_t."'>klikni</a></button></p><br><br>";
 
 echo "<h3>Uczestnicy turnieju</h3>";
 echo "<table>";
