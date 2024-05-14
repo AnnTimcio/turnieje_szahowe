@@ -9,6 +9,8 @@ while ($row = $res -> fetch_row()) {
     echo "<tr><td>"."<a href='Turniej.php'>".$row[0]."</a>"."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
   }
 
-echo "</table>";
+echo "</table><br><br>";
+
+echo "Zarejestrój swój turniej: <button><a href='dodajtu.php'>klikni</a></button>";
 mysqli_close($a);
 ?>

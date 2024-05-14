@@ -23,7 +23,7 @@ if ($a->query($b) === TRUE) {
     {
         echo 
         "<script type= 'text/javascript'>
-            alert('Wystąpił bład sprubuj ponownie');
+            alert('Wystąpił bład. sprubuj ponownie');
         </script>";
     }
 
