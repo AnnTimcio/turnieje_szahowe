@@ -19,12 +19,12 @@ $res2 = mysqli_query($a, $c);
 while ($row = $res -> fetch_row()) {
     echo "<h1>".$row[0]."</h1>";
     echo "<p> organizowane przez: ".$row[1]."</p>";
-    echo "<p> odbędzie się ".$row[2]."</p><br><br>";
-    echo $row[3];
+    echo "<p> odbędzie się ".$row[2]."</p>";
+    echo "<p>".$row[3]."</p><br><br>";
   }
 
 
-echo "zarejestruj się i weź udział: <BUTTON><a href='Rej.php'>klikni</a></button><br><br>";
+echo "<p>zarejestruj się i weź udział: <BUTTON><a href='Rej.php'>klikni</a></button></p><br><br>";
 
 echo "<h3>Uczestnicy turnieju</h3>";
 echo "<table>";

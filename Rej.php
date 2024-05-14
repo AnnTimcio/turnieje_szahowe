@@ -3,14 +3,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
 </html>
-
+<h1>Podaj swoje dane</h1>
+<div>
 <form method="POST" action="Rej.php">
-Podaj swoje imie i nazwisko: <input type="text" name="naz"><br>
-Podaj swoją date urodzenia: <input type="date" name="dat"><br>
-Podaj numer turnieju: <input type="number" name="tur"><br>
-<input type="submit" name="submit"></input>
+<p class="tur">Podaj swoje imie i nazwisko: <input type="text" name="naz"></p> 
+<p class="tur">Podaj swoją date urodzenia: <input type="date" name="dat"></p>
+<p class="tur">Podaj numer turnieju: <input type="number" name="tur"></p>
+<p class="tur"><input type="submit" name="submit"></input></p> 
 </form>
-
+</div>
 <?php
 if(isset($_POST['submit'])){
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');

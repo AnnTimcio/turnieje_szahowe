@@ -31,10 +31,35 @@ td{
 
 a{
   text-decoration: none; 
-  color:rgb(101, 96, 96); 
+  color:rgb(0, 0, 0); 
   background-color: rgb(205, 202, 197) ;
 }
 
 a:visited{
-    color:rgb(138, 132, 132);
+    color:rgb(64, 59, 59);
+}
+
+button{
+    background-color:rgb(205, 202, 197) ;
+}
+
+p{
+    text-align: center;
+}
+
+div{
+    border: solid black 2px;
+    background-color: rgb(205, 202, 197);
+}
+
+.tur{
+    background-color: rgb(205, 202, 197);
+}
+
+input{
+    background-color: aliceblue;
+}
+
+form{
+    background-color: rgb(205, 202, 197)
 }

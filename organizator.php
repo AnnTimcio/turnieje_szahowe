@@ -9,6 +9,8 @@ $a = mysqli_connect('localhost','root','','turnieje_szachowe');
 $b = "SELECT nazwa, organizator, data_t, opis, id_t FROM turniej";
 $res = mysqli_query($a, $b);
 
+echo "<h1>Turnieje</h1>";
+
 echo "<table>";
 
 while ($row = $res -> fetch_row()) {
@@ -17,6 +19,6 @@ while ($row = $res -> fetch_row()) {
 
 echo "</table><br><br>";
 
-echo "Zarejestrój swój turniej: <button><a href='dodajtu.php'>klikni</a></button>";
+echo "<h3>Zarejestruj swój turniej: <button><a href='dodajtu.php'>klikni</a></button></h3>";
 mysqli_close($a);
 ?>

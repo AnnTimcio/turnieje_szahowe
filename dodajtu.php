@@ -3,15 +3,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
 </html>
-
+<h1>Dodaj swój turniej</h1>
+<div>
 <form method="POST" action="dodajtu.php">
-Podaj nazwe organizatora: <input type="text" name="org"><br>
-Podaj nazwe turnieju: <input type="text" name="naz"><br>
-Podaj date turnieju: <input type="date" name="data"><br>
-Napisz opis dla turnieju: <input type="text" name="opis"><br>
-<input type="submit" name="submit"></input>
+<p class="tur">Podaj nazwe organizatora: <input  type="text" name="org"></p> 
+<p class="tur">Podaj nazwe turnieju: <input type="text" name="naz"></p>
+<p class="tur">Podaj date turnieju: <input type="date" name="data"></p> 
+<p class="tur">Napisz opis dla turnieju: <input type="text" name="opis"></p> 
+<p class="tur"> <input type="submit" name="submit"></input></p> 
 </form>
-
+</div>
 <?php
 if(isset($_POST['submit'])){
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');
