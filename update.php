@@ -1,8 +1,8 @@
 <?php
-if(isset($_GET['t'])) {
-    $id_t = $_GET['t'];
-} elseif (isset($_POST['t'])){
-    $id_t= $_POST['t'];
+if(isset($_GET['u'])) {
+    $id_u = $_GET['u'];
+} elseif (isset($_POST['u'])){
+    $id_u= $_POST['u'];
 } else {
     die("coś poszło nie tak");
   }
@@ -13,12 +13,12 @@ if(isset($_GET['t'])) {
     <link rel="stylesheet" href="style.css">
   </head>
 </html>
-<h1>Podaj swoje dane</h1>
+<h1>Podaj dane do akutalizacji</h1>
 <div>
-<form method="POST" action="Rej.php">
-<p class="tur">Podaj swoje imie i nazwisko: <input type="text" name="naz"></p> 
-<p class="tur">Podaj swoją date urodzenia: <input type="date" name="dat"></p>
-<input type="hidden" name="t" value='<?php echo $id_t ?>'>
+<form method="POST" action="update.php">
+<p class="tur">Podaj imie i nazwisko: <input type="text" name="naz"></p> 
+<p class="tur">Podaj date urodzenia: <input type="date" name="dat"></p>
+<input type="hidden" name="u" value='<?php echo $id_u ?>'>
 <p class="tur"><input type="submit" name="submit"></input></p> 
 </form>
 </div>
@@ -32,11 +32,11 @@ if(isset($_POST['submit'])){
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');
 $imienaz = $_POST['naz'];
 $dataa = $_POST['dat'];
-$b = "INSERT INTO uczestnik (nazwisko, data_u, id_t) VALUES ('$imienaz', '$dataa','$id_t')";
+$b = "UPDATE uczestnik SET nazwisko = '$imienaz', data_u = '$dataa' WHERE id_u = $id_u)";
 if ($a->query($b) === TRUE) {
     echo "
         <script type= 'text/javascript'>
-            alert('Zostałeś dodany');
+            alert('udało się');
         </script>";
     } 
     else 
@@ -51,4 +51,3 @@ if ($a->query($b) === TRUE) {
 mysqli_close($a);}
 
 ?>
-
