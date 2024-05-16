@@ -7,6 +7,15 @@ if(isset($_GET['u'])) {
     die("coś poszło nie tak");
   }
 
+
+$x = mysqli_connect('localhost','root','','turnieje_szachowe');
+$f = "SELECT nazwisko, data_u FROM uczestnik WHERE id_u=$id_u";
+$res = mysqli_query($x, $f);
+while ($row = $res -> fetch_row()) {
+$naz= $row[0];
+$dat= $row[1];
+}
+mysqli_close($x);
 ?>
 <html>
   <head>
@@ -16,8 +25,8 @@ if(isset($_GET['u'])) {
 <h1>Podaj dane do akutalizacji</h1>
 <div>
 <form method="POST" action="update.php">
-<p class="tur">Podaj imie i nazwisko: <input type="text" name="naz"></p> 
-<p class="tur">Podaj date urodzenia: <input type="date" name="dat"></p>
+<p class="tur">Podaj imie i nazwisko: <input type="text" name="naz" value='<?php echo $naz ?>'></p> 
+<p class="tur">Podaj date urodzenia: <input type="date" name="dat" value='<?php echo $dat ?>'></p>
 <input type="hidden" name="u" value='<?php echo $id_u ?>'>
 <p class="tur"><input type="submit" name="submit"></input></p> 
 </form>
@@ -32,7 +41,7 @@ if(isset($_POST['submit'])){
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');
 $imienaz = $_POST['naz'];
 $dataa = $_POST['dat'];
-$b = "UPDATE uczestnik SET nazwisko = '$imienaz', data_u = '$dataa' WHERE id_u = $id_u)";
+$b = "UPDATE uczestnik SET nazwisko = '$imienaz', data_u = '$dataa' WHERE id_u = $id_u";
 if ($a->query($b) === TRUE) {
     echo "
         <script type= 'text/javascript'>

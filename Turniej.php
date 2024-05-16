@@ -12,7 +12,7 @@ if(!isset($_GET['t'])){
 $id_t = $_GET['t'];
 $a = mysqli_connect('localhost','root','','turnieje_szachowe');
 $b = "SELECT nazwa, organizator, data_t, opis FROM turniej where $id_t=id_t";
-$c = "SELECT nazwisko, data_u, nazwa from uczestnik INNER JOIN turniej ON turniej.id_t=uczestnik.id_t where uczestnik.id_t=$id_t";
+$c = "SELECT nazwisko, data_u, nazwa, id_u from uczestnik INNER JOIN turniej ON turniej.id_t=uczestnik.id_t where uczestnik.id_t=$id_t";
 $res = mysqli_query($a, $b);
 $res2 = mysqli_query($a, $c);
 
@@ -29,7 +29,7 @@ echo "<p>zarejestruj się i weź udział: <BUTTON><a href='Rej.php?t=".$id_t."'>
 echo "<h3>Uczestnicy turnieju</h3>";
 echo "<table>";
 while ($row2 = $res2 -> fetch_row()) {
-  echo "<tr><td><a href= 'update.php?u='>".$row2[0]."</a></td><td>".$row2[1]."</td><td>".$row2[2]."</td></tr>";
+  echo "<tr><td><a href= 'update.php?u=".$row2[3]."'>".$row2[0]."</a></td><td>".$row2[1]."</td><td>".$row2[2]."</td></tr>";
 }
 echo "</table>";
 
