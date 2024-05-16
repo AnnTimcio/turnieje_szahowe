@@ -29,7 +29,7 @@ echo "<p>zarejestruj się i weź udział: <BUTTON><a href='Rej.php?t=".$id_t."'>
 echo "<h3>Uczestnicy turnieju</h3>";
 echo "<table>";
 while ($row2 = $res2 -> fetch_row()) {
-  echo "<tr><td><a href= 'update.php?u=".$row2[3]."'>".$row2[0]."</a></td><td>".$row2[1]."</td><td>".$row2[2]."</td></tr>";
+  echo "<tr><td><a href= 'update.php?u=".$row2[3]."'>".$row2[0]."</a></td><td><a href='usuwanie_u.php?d=".$row2[3]."'>".$row2[1]."</a></td><td>".$row2[2]."</td></tr>";
 }
 echo "</table>";
 

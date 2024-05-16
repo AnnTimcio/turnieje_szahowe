@@ -14,7 +14,7 @@ echo "<h1>Turnieje</h1>";
 echo "<table>";
 
 while ($row = $res -> fetch_row()) {
-    echo "<tr><td>"."<a href='Turniej.php?t=".$row[4]."'>".$row[0]."</a>"."</td><td>".$row[1]."</td><td>".$row[2]."</td><td><a href='update_turniej.php?u=".$row[4]."'>".$row[3]."</a></td></tr>";
+    echo "<tr><td>"."<a href='Turniej.php?t=".$row[4]."'>".$row[0]."</a>"."</td><td>".$row[1]."</td><td><a href='usuwanie_t.php?b=".$row[4]."'>".$row[2]."</a></td><td><a href='update_turniej.php?u=".$row[4]."'>".$row[3]."</a></td></tr>";
   }
 
 echo "</table><br><br>";
